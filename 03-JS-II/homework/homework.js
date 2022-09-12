@@ -52,6 +52,19 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
+  switch(idioma){
+      case 'aleman':
+        return 'Guten Tag!';
+        break;
+      case 'mandarin':
+        return 'Ni Hao!';
+        break;
+      case 'ingles':
+        return 'Hello!';
+        break;
+      default :
+        return 'Hola!';      
+  }
 }
 
 function colors(color) {
@@ -62,6 +75,22 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  switch(color){
+      case 'blue':
+        return 'This is blue';
+        break;
+      case 'red':
+        return 'This is red';
+        break;
+      case 'green':
+        return 'This is green';
+        break;
+      case 'orange':
+        return 'This is orange';
+        break;
+      default:
+        return 'Color not found';        
+  }
 }
 
 function esDiezOCinco(numero) {
