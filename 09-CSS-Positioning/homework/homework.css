@@ -45,9 +45,28 @@ archivo en cualquiera de estas carpetas, estás en el lugar equivocado.
     display: flex;
     justify-content: space-around;
     align-items: center;
-            
+    
 }
 
 
 
 /* Ejercicio 6. */
+#ejercicioCinco{
+    direction: rtl;      
+}
+
+/*Ejercicio 7*/
+#ejercicioSiete{
+    display: flexbox;
+    align-items: center;
+}   
+
+#elementoDos{
+    position: relative;
+    top: 100px;
+}
+
+#elementoCuatro{
+    position: relative; 
+    top:100px;
+}
