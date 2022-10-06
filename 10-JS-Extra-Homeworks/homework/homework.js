@@ -10,6 +10,11 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  let arreglo=[];
+  for(let clave in objeto){
+      arreglo.push([clave,objeto[clave]]);
+  }
+  return arreglo;
 }
 
 
@@ -18,6 +23,15 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  const cantCaracteres={};
+  for(let i=0;i<string.length;i++){
+      if(string[i] in cantCaracteres){
+          cantCaracteres[string[i]]++;
+      }else{
+          cantCaracteres[string[i]]=1;  
+      }
+  }
+  return cantCaracteres;
 }
 
 
@@ -26,6 +40,17 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  let mayusculas="";
+  let minusculas="";
+
+  for(let i=0;i<s.length;i++){
+      if(s[i]===s[i].toUpperCase()){
+          mayusculas=mayusculas+s[i];
+      }else{
+          minusculas=minusculas+s[i];
+      }
+  }
+  return mayusculas+minusculas;
 }
 
 
