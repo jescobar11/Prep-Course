@@ -97,6 +97,13 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  let nuevaCadena="";
+  for(let letra of cadena){
+      if(letra!=="a" && letra!=="b" && letra!=="c"){
+          nuevaCadena+=letra;
+      }
+  }
+  return nuevaCadena;
 }
 
 
@@ -104,6 +111,11 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+    return arr.sort(  //ordena el array dependiendo del resultado de la funcion
+              function(a,b){
+                  return a.length-b.length;
+              }
+            );
 }
 
 
@@ -112,7 +124,16 @@ function buscoInterseccion(arreglo1, arreglo2){
   //retornar un nuevo array con la intersección de ambos elementos. (Ej: [4,2,3] unión [1,3,4] = [3,4].
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
-  //Escribe tu código aquí  
+  //Escribe tu código aquí 
+  let arrayNuevo=[];
+  for(var elemento of arreglo1){
+      for(var elemtno2 of arreglo2){
+          if(elemento===elemtno2){
+              arrayNuevo.push(elemento);
+          }
+      }
+  }
+  return arrayNuevo;
 }
 
 
@@ -121,13 +142,13 @@ function buscoInterseccion(arreglo1, arreglo2){
 // --------------------------------
 
 module.exports = {
-   deObjetoAmatriz,
-   numberOfCharacters,
-   capToFront,
-   asAmirror,
-   capicua,
-   deleteAbc,
-   sortArray,
-   buscoInterseccion,
+  deObjetoAmatriz,
+  numberOfCharacters,
+  capToFront,
+  asAmirror,
+  capicua,
+  deleteAbc,
+  sortArray,
+  buscoInterseccion,
 };
 
