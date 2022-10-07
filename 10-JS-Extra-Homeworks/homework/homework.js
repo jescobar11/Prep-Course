@@ -60,6 +60,15 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  let ArrayPalabrasSeparadas=str.split(" ");//separa el string en una array de palabras
+  let ArrayPalabrasRevertida=[];
+  for(let i=0; i<ArrayPalabrasSeparadas.length;i++){
+      let Arraypalabra=ArrayPalabrasSeparadas[i].split("");//separa cada una de las palabras del array en otro array de palabras
+      let ArrayPalabraRevertida=Arraypalabra.reverse();//revierte la palabra
+      ArrayPalabrasRevertida.push(ArrayPalabraRevertida.join(""));//adiciona las palabras revertidas en el array de palabras revertidas
+  }
+
+  return ArrayPalabrasRevertida.join(" ");//retorna el string de palabras revertidas
 } 
 
 
@@ -68,6 +77,19 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  /*let ArrayNumeros=numero.toString().split("");
+  let numeroEspejo=ArrayNumeros.reverse().join("");
+  if(numero===parseInt(numeroEspejo)){
+      return "Es capicua";
+  }else{
+    return "No es capicua";
+  }*/
+  let numeroEspejo=numero.toString().split("").reverse().join("");//obtiene el nuemro dado vuelta
+  if(numero===parseInt(numeroEspejo)){
+    return "Es capicua";
+  }else{
+    return "No es capicua";
+  }
 }
 
 
